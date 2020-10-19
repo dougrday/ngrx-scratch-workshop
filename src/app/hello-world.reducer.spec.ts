@@ -1,11 +1,11 @@
-import { reducer, initialState } from './hello-world.reducer';
+import { helloWorldReducer, initialState } from './hello-world.reducer';
 
 describe('HelloWorld Reducer', () => {
   describe('an unknown action', () => {
     it('should return the previous state', () => {
       const action = {} as any;
 
-      const result = reducer(initialState, action);
+      const result = helloWorldReducer(initialState, action);
 
       expect(result).toBe(initialState);
     });

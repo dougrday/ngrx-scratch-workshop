@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { sayHelloAction } from './hello-world.actions';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +10,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   name = 'World';
 
-  handleBlur() {
-    
+  constructor(private store$: Store) {
+  }
+
+  handleSubmit(): void {
+    this.store$.dispatch(sayHelloAction({ name: this.name }));
   }
 }
