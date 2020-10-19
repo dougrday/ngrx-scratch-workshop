@@ -123,6 +123,11 @@
           }
         }
       }
-    }},
-  "defaultProject": "ngrx-scratch-workshop"
+    }
+  },
+  "defaultProject": "ngrx-scratch-workshop",
+  "cli": {
+    "analytics": false,
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
